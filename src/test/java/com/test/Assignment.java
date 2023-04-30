@@ -15,7 +15,7 @@ public class Assignment extends TestBase {
     }
 
     @Test
-    public void createCustomer() {
+    public void createCustomer()  {
         setUp();
         NewCustomer customer = new NewCustomer(driver);
         customer.createCustomer();

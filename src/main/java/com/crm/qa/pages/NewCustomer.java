@@ -3,6 +3,12 @@ package com.crm.qa.pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
+
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class NewCustomer {
@@ -31,10 +37,8 @@ public class NewCustomer {
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_ContactName")).sendKeys("ANDRES VASQUEZ");
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_ContactTitle")).sendKeys("Sr");
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_Address")).sendKeys("Calle 89 # 20-21");
-        driver.findElement(By.id("select2-chosen-5")).click();
-        driver.findElement(By.xpath("//*[starts-with(@class, 'select2-result-label') ]")).click();
-
-        driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_Region")).sendKeys("Cundinamarca");
+       // driver.findElement(By.id("select2-chosen-5")).click();
+       driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_Region")).sendKeys("Cundinamarca");
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_PostalCode")).sendKeys("111111");
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_Fax")).sendKeys("5555555");
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_Phone")).sendKeys("3203204321");
@@ -43,9 +47,8 @@ public class NewCustomer {
         driver.findElement(By.id("Serenity_Demo_Northwind_CustomerDialog9_Email")).sendKeys("andresvasquez@gmail.com");
         scrollIntoView(driver.findElement(By.xpath("//*[starts-with(@class, 'panel-titlebar-text') ]")) , driver);
         elementToBeClickable( By.xpath("//*[starts-with(@class, 'fa fa-check-circle text-purple') ]"));
-
-
         driver.findElement(By.xpath("//*[starts-with(@class, 'fa fa-check-circle text-purple') ]")).click();
+
     }
 
 
