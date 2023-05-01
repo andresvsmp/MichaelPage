@@ -29,7 +29,7 @@ public class TestBase {
 
 
     public void setUp(){
-
+        driver.manage();
         driver.manage().window().maximize(); //Maximize window
         driver.manage().deleteAllCookies(); // delete all the cookies
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS); // dynamic wait
@@ -41,7 +41,7 @@ public class TestBase {
     }
 
     public void closedBrowser() {
-        driver.quit();
+        driver.close();
     }
 
 }
